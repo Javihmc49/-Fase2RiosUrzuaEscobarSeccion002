@@ -1,0 +1,132 @@
+{% extends "base_generic.html" %}
+<!DOCTYPE html>
+
+<html lang="es-Cl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzaDominoHutTeleJhons</title>´
+    {% load static %}
+    <link rel="stylesheet" href="static'css/estilos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<br>
+<body background="../static/img/Fondo1.jpg">
+    {% block content %}
+    <main>
+        <section id="main">
+          <div class=prueba1>
+              <article class="col">
+                <h2 >Promociones covid individual</h2>
+                <div class="row">       
+                  <div class="col-md">        
+                      <div class="card" style="background: black">
+                        <img class="card-img-top" src="../static/img/promo1.jpg" alt="150" height="550" width="100" aling ="center">            
+                        <div class="card-body" >
+                          <p class="card-text">Promocion Pizza pequeña (3 ingredientes a eleccion) con acompañamiento simple(a eleccion) y una bebida de 3LT </p>
+                          <a href="https://www.pizzapizza.cl/promociones/" class="btn btn-primary" >Pedir</a>
+                        </div>
+                      </div>          
+              </div>
+            </article>
+          </div>
+            <br>
+            <br>
+            <div class=prueba1>
+            <article class="col">
+                <h2 >Promociones covid mediano</h2>
+                
+                <div class="row">       
+                  <div class="col-md">        
+                      <div class="card" style="background: black">
+                        <img class="card-img-top" src="../static/img/promo2.jpg" alt="150" height="550" width="100" aling ="center">            
+                        <div class="card-body">
+                          <p class="card-text">Promocion Pizza mediana (3 ingredientes a eleccion) y una bebida de 2LT</p>
+                          <a href="https://www.pizzapizza.cl/promociones/" class="btn btn-primary">Pedir</a>
+                        </div>
+                      </div>          
+                  </div>
+            </article>
+          </div>
+            <br>
+            <br>
+            <div class=prueba1>
+            <article class="col">
+                <h2 >Promociones covid familiar </h2>
+                <div class="row">       
+                  <div class="col-md">        
+                      <div class="card" style="background: black">
+                        <img class="card-img-top" src="../static/img/promo3.jpg" alt="150" height="550" width="100" aling ="center">            
+                        <div class="card-body">
+                          <p class="card-text" >Promocion Pizza familiar (3 ingredientes a eleccion) con 3 acompañamientos a eleccion y una bebida de 1.5LT</p>
+                          <a href="https://www.pizzapizza.cl/promociones/" class="btn btn-primary">Pedir</a>
+                        </div>
+                        
+                      </div>          
+                  </div>
+            </article>
+          </div>
+        </section>
+        <div class=carrusel>
+        <!--------------Carrusel----------------------------->
+        <br>
+        <br>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../static/img/Pizza1.jpg"  class="d-block w-100" alt="350" height="350" width="100" aling =" center"  >
+              <div class="carousel-caption d-none d-md-block">
+                <h5 style="color: black;" >Combo Supremo</h5>
+                <p style="color: black;" >Este combo incluye: Pizza todas las carnes,bebida de 1.5,nugges de pollo y papas supremas pequeña</p>
+              </div>
+            </div>
+         
+            <div class="carousel-item">
+              <img src="../static/img/pizza2.jpg" class="d-block w-100" alt="350" height="350" width="200" aling =" center" >
+              <div class="carousel-caption d-none d-md-block">
+                <h5 style="color: black;">Combo amigos</h5>
+                <p style="color: black;">Esta Promo contiene 2 Pizzas mediana, con 3 acompañamientos (a eleccion) y una bebida de 1.5LT</p>
+            </div>
+            
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/pizza3.jpg" class="d-block w-100" alt="350" height="350 " width="200" aling =" center" >
+              <div class="carousel-caption d-none d-md-block">
+                <h5 style="color: black;">Combo peperoni</h5>
+                <p style="color: black;">Esta promocion contiene pizza de peperoni,bebida de 1.5lts y acompañamiento a eleccion</p>
+              
+              </div>
+            </div>
+            
+          </div>
+          
+          <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+          <!--------------Carrusel----------------------------->
+        </div>
+    </main>
+
+
+      {% endblock %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
