@@ -1,44 +1,10 @@
-{%block inicio%}
-<!DOCTYPE html>
+{% extends "base_generic.html" %}
 
-<html lang="es-Cl"></html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PizzaDominoHutTeleJhons</title>
-    {% load static %}
-    <link rel="stylesheet" href="{%static'css/estilos.css'%}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
-
-
-</head>
-
-
+{%load static%}
 <br>
 <body background="../static/img/Fondo1.jpg">
-  
-    <header>
-        <h1  ><img src="../static/img/logo.png" style="width: 70px;" > Pizzas Covid "Para morir de sabor"<img src="../static/img/logo.png" style="width: 70px;" ></h1>
-      <br>
-        <nav class="navBar navbar-expand-lg navbar-light bg-light">
-            <button id="uwu" 
-                class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-         
-            <div class="collapse navbar-collapse justify-content-between alingn-items-center w-100" style="background:silver "  >
+    {%block content%}
 
-                <ul class="navbar-nav mx-auto nav-tabs text-lg-center text-left" style="background:silver  " >
-                    <li class="nav-link" ><a href="index.html" style="color: black;">Inicio </a></li>
-                    <li class="nav-link"><a href="sobre_nosotros.html" style="color: black;">Sobre Nosotros</a></li>
-                    <li class="nav-link"><a href="contacto.html" style="color: black;">Contacto</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
                
         <style>
@@ -137,7 +103,8 @@
             <div class="test3" style="margin-left: auto;">
                 <h3 style="margin-left:auto">Formulario de contacto Pizzas Covid</h3>
                 <br>
-            <form id="mi-formulario" action="index.html">
+            <form id="mi-formulario" method="POST">
+                {% csrf_token %}
                 <label>Correo Electrónico: </label>
                 <input type="text" name="email" required placeholder="nombre@dominio.cl" minlength="11">
               
@@ -173,74 +140,8 @@
             </div>
            
         </body>
-        <div class="espacio" style="height:100px"></div>
 
-        <div class="prueba3">
-            <footer id="footer">
-                <div id="inner">
-                    <div class="col7">
-                        <div class="minititulo">
-                            Contacto
-                            <div class="espacio" style="height:30px"></div>
-                        </div>
-                        <div class="miniparrafo">
-                            <img src="../static/img/house.png" style="width: 20px;" > Esquina Blanca 501  Maipú Región Metropolitana
-                        </div>
-                        <div class="miniparrafo">
-                            <div class="espacio" style="height:10px"></div>
-                            <img src="../static/img/phone-call.png" style="width: 20px;" > +56987654321
-                        </div>
-                        <div class="miniparrafo">
-                            <div class="espacio" style="height:10px"></div>
-                            <img src="../static/img/envelope.png" style="width: 20px;" > info@pizzascovids.com.hk
-                        </div>
-                        <div class="miniparrafo">
-                            <div class="espacio" style="height:10px"></div>
-                            <img src="../static/img/link.png" style="width: 20px;" > http://www.pizzascovid.com.hk
-                        </div>
-                    
-                    </div>
-                    <div class="col8">
-                        <div class="minititulo">
-                            Horarios
-                            <div class="espacio" style="height:30px"></div>
-                        </div>
-                        <div class="miniparrafo">
-                            Lunes 12:00 - 22:00 
-                        </div>
-                        <div class="miniparrafo">
-                           Martes 12:00 - 22:00 
-                        </div>
-                        <div class="miniparrafo">
-                            Miercoles 12:00 - 22:00 
-                        </div>
-                        <div class="miniparrafo">
-                            Jueves 12:00 - 22:00 
-                        </div>
-                        <div class="miniparrafo">
-                            Viernes 12:00 - 02:00 
-                        </div>
-                        <div class="miniparrafo">
-                           Sabados 12:00 - 02:00 
-                        </div>
-                        <div class="miniparrafo">
-                            Domingos Cerrado
-                        </div>
-                    </div>
-                    <div class="col9">
-                        <div class="minititulo">
-                            Mapa
-                        </div>
-                        <img src="../static/img/mapa.jpg" style="width: 325px;" > </a> 
-                        <div class="espacio" style="height:30px"></div>
-                    </div>
-                </div>
-            </footer> 
-        </div>
-
-        <div class="espacio" style="height:50px"></div>
     <!----------->
 
 </body>
 {% endblock %}
-</html>

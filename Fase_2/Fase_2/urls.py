@@ -18,10 +18,13 @@ from django.urls import path
 from django.urls import include
 from django.conf.urls.static import static
 from django.conf import settings
+from Menu import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Menu/',include('Menu.urls')),
+    path('Contacto/',views.contacto,name='Contacto'),
+    path('Sobre_Nosotros/',views.sobre_nosotros,name='Sobre_Nosotros'),
     
 ]
 
